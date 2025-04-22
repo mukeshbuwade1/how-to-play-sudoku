@@ -3,166 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How to Play Sudoku</title>
+    <title>How to Play Sudoku - Think Sudoku</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fff;
+        color: #333;
+        line-height: 1.7;
         margin: 0;
         padding: 0;
-        background-color: #f8f8f8;
-        text-align: center;
       }
-      .navbar {
-        background-color: #333;
-        overflow: hidden;
-        padding: 10px 0;
-      }
-      .navbar a {
-        color: white;
-        text-decoration: none;
-        padding: 14px 20px;
-        display: inline-block;
-      }
-      .navbar a:hover {
-        background-color: #575757;
-      }
+
       .container {
-        max-width: 800px;
-        margin: 20px auto;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px 20px;
       }
-      h1,
-      h2 {
-        color: #333;
-      }
-      p {
-        text-align: left;
-        line-height: 1.6;
-      }
-      .rules,
-      .tips {
-        text-align: left;
-        padding-left: 20px;
-      }
-      .rules li,
-      .tips li {
-        margin: 10px 0;
-      }
-      .image-container {
+
+      h1 {
         text-align: center;
-        margin: 20px 0;
+        color: #2c3e50;
       }
-      .image-container img {
+
+      .step {
+        margin-top: 40px;
+      }
+
+      .step h3 {
+        color: #34495e;
+        margin-bottom: 10px;
+      }
+
+      .step img {
         max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+      }
+
+      .tips {
+        background: #ecf0f1;
+        border-left: 5px solid #3498db;
+        padding: 20px;
+        margin-top: 40px;
+        border-radius: 8px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 60px;
+        font-size: 0.9em;
+        color: #777;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 20px 15px;
+        }
       }
     </style>
   </head>
   <body>
-<!--     <div class="navbar">
-      <a href="#">Home</a>
-      <a href="#rules">Rules</a>
-      <a href="#tips">Tips</a>
-      <a href="#contact">Contact</a>
-    </div> -->
-
     <div class="container">
-      <h1>How to Play Sudoku</h1>
-      <div class="image-container">
-        <img
-          src="https://source.unsplash.com/800x400/?sudoku,puzzle"
-          alt="Sudoku Grid"
-        />
-      </div>
-      <p>
-        Sudoku is played on a grid of 9 x 9 spaces. Within the rows and columns
-        are 9 “squares” (made up of 3 x 3 spaces). Each row, column, and square
-        (9 spaces each) needs to be filled out with the numbers 1-9, without
-        repeating any numbers within the row, column, or square. The more spaces
-        filled in, the easier the game – the more difficult Sudoku puzzles have
-        very few spaces that are already filled in.
-      </p>
+      <h1>🧩 How to Play Sudoku</h1>
 
-      <h2 id="rules">Sudoku Rule № 2: Don’t Repeat Any Numbers</h2>
-      <div class="image-container">
+      <div class="step">
+        <h3>1. Understand the Grid Structure</h3>
+        <p>
+          The Sudoku puzzle is a 9x9 grid made up of nine 3x3 boxes. Some cells
+          are pre-filled. Your task is to fill the empty ones without breaking
+          the rules.
+        </p>
         <img
-          src="https://source.unsplash.com/800x400/?numbers,logic"
-          alt="Sudoku Numbers"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Sudoku_blank.svg/800px-Sudoku_blank.svg.png"
+          alt="Sudoku Grid Structure"
         />
       </div>
-      <p>
-        As you can see, in the upper left square (circled in blue), this square
-        already has 7 out of the 9 spaces filled in. The only numbers missing
-        from the square are 5 and 6. By seeing which numbers are missing from
-        each square, row, or column, we can use process of elimination and
-        deductive reasoning to decide which numbers need to go in each blank
-        space.
-      </p>
-      <p>
-        For example, in the upper left square, we know we need to add a 5 and a
-        6 to be able to complete the square, but based on the neighboring rows
-        and squares we cannot clearly deduce which number to add in which space.
-        This means that we should ignore the upper left square for now and try
-        to fill in spaces in some other areas of the grid instead.
-      </p>
 
-      <h2>Sudoku Rule № 3: Don’t Guess</h2>
-      <div class="image-container">
+      <div class="step">
+        <h3>2. Fill Digits from 1 to 9</h3>
+        <p>
+          Use only the digits 1 through 9. Each digit must appear exactly once
+          in every row, column, and 3x3 box. You can't repeat any number in the
+          same row, column, or box.
+        </p>
         <img
-          src="https://source.unsplash.com/800x400/?brain,thinking"
-          alt="Logical Thinking"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Sudoku-by-L2G-20050714.svg/640px-Sudoku-by-L2G-20050714.svg.png"
+          alt="Sudoku Rules"
         />
       </div>
-      <p>
-        Sudoku is a game of logic and reasoning, so you shouldn’t have to guess.
-        If you don’t know what number to put in a certain space, keep scanning
-        the other areas of the grid until you see an opportunity to place a
-        number. But don’t try to “force” anything – Sudoku rewards patience,
-        insights, and recognition of patterns, not blind luck or guessing.
-      </p>
 
-      <h2 id="tips">Sudoku Rule № 4: Use Process of Elimination</h2>
-      <div class="image-container">
+      <div class="step">
+        <h3>3. Start With the Obvious</h3>
+        <p>
+          Look for rows, columns, or boxes that already have many numbers filled
+          in. This gives you fewer possibilities and helps you deduce the
+          correct number more easily.
+        </p>
         <img
-          src="https://source.unsplash.com/800x400/?strategy,boardgame"
-          alt="Sudoku Strategy"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Sudoku-solving-first-steps.svg/640px-Sudoku-solving-first-steps.svg.png"
+          alt="Start with Easy Spots"
         />
       </div>
-      <p>
-        What do we mean by using “process of elimination” to play Sudoku? Here
-        is an example. In this Sudoku grid (shown below), the far left-hand
-        vertical column (circled in Blue) is missing only a few numbers: 1, 5,
-        and 6.
-      </p>
-      <p>
-        One way to figure out which numbers can go in each space is to use
-        “process of elimination” by checking to see which other numbers are
-        already included within each square – since there can be no duplication
-        of numbers 1-9 within each square (or row or column).
-      </p>
-      <p>
-        In this case, we can quickly notice that there are already number 1s in
-        the top left and center left squares of the grid (with number 1s circled
-        in red). This means that there is only one space remaining in the far
-        left column where a 1 could possibly go – circled in green. This is how
-        the process of elimination works in Sudoku – you find out which spaces
-        are available, which numbers are missing – and then deduce, based on the
-        position of those numbers within the grid, which numbers fit into each
-        space.
-      </p>
-      <p>
-        Sudoku rules are relatively uncomplicated – but the game is infinitely
-        varied, with millions of possible number combinations and a wide range
-        of levels of difficulty. But it’s all based on the simple principles of
-        using numbers 1-9, filling in the blank spaces based on deductive
-        reasoning, and never repeating any numbers within each square, row, or
-        column.
-      </p>
+
+      <div class="step">
+        <h3>4. Use the Process of Elimination</h3>
+        <p>
+          Figure out where numbers can or cannot go. If a number already exists
+          in a row, column, or box, it cannot be used again in that row, column,
+          or box.
+        </p>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Sudoku-elimination-technique.svg/640px-Sudoku-elimination-technique.svg.png"
+          alt="Elimination Strategy"
+        />
+      </div>
+
+      <div class="step">
+        <h3>5. Pencil In Possibilities</h3>
+        <p>
+          If you're unsure, you can note possible numbers in a cell (most Sudoku
+          apps, including Think Sudoku, have a "note" feature). This helps you
+          track and eliminate numbers logically.
+        </p>
+        <img
+          src="https://sudoku.com/images/note-mode.png"
+          alt="Pencil In Possibilities (Notes)"
+        />
+      </div>
+
+      <div class="step">
+        <h3>6. Avoid Guessing</h3>
+        <p>
+          Sudoku is a game of logic, not luck. Avoid guessing. Use strategies
+          like "naked pairs", "hidden singles", or "box-line reduction" to solve
+          tough puzzles.
+        </p>
+        <img
+          src="https://sudoku.com/images/tips/hidden-singles.png"
+          alt="Sudoku Strategies"
+        />
+      </div>
+
+      <div class="tips">
+        <strong>💡 Bonus Tips:</strong>
+        <ul>
+          <li>Use the undo and note features wisely if you're using an app.</li>
+          <li>Practice daily to improve speed and accuracy.</li>
+          <li>
+            Start with easy levels, and slowly move to medium and hard ones.
+          </li>
+        </ul>
+      </div>
+
+      <footer>© 2025 Think Sudoku | Developed by Mukesh Buwade</footer>
     </div>
   </body>
 </html>
